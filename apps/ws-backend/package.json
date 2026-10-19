@@ -8,13 +8,15 @@
     "dev": "npm run build && npm run start"
   },
   "dependencies": {
+    "dotenv": "^18.0.8",
     "ws": "^8.22.0"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@types/ws": "^8.18.2",
     "@repo/common": "workspace:*",
-    "@repo/db": "workspace:*"
+    "@repo/db": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "26.4.1",
+    "@types/ws": "^8.18.2"
   },
   "keywords": [],
   "author": "",

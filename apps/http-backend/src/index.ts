@@ -1,10 +1,14 @@
+import "dotenv/config";
 import express from "express";
-const app = express();
-
 import { JWT_SECRET } from "@repo/common/config";
 import { prismaClient } from "@repo/db/client";
-import { user } from "@repo/common/schema";
-console.log(user);
+import { signinSchema, createRoomSchema } from "@repo/common/schema";
+
+const PORT = process.env.PORT || 5000;
+const app = express();
 
 console.log(JWT_SECRET);
-app.listen(5000);
+
+app.listen(PORT, () => {
+  console.log(`http-server is running at ${PORT}`);
+});

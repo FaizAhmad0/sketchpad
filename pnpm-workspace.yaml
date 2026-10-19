@@ -3,7 +3,6 @@ packages:
   - "packages/*"
 allowBuilds:
   '@prisma/engines': true
-  node: set this to true or false
   prisma: true
 minimumReleaseAgeExclude:
   - '@turbo/darwin-64@2.11.9'
