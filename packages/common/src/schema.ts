@@ -1,4 +1,4 @@
-import { minLength, trim, z } from "zod";
+import { z } from "zod";
 
 export const signupSchema = z.strictObject({
   name: z.string().trim().min(3).max(20),
@@ -29,3 +29,8 @@ export const createChatSchema = z.strictObject({
 
   message: z.string().trim().min(1).max(2000),
 });
+
+export type SignupInput = z.infer<typeof signupSchema>;
+export type SigninInput = z.infer<typeof signinSchema>;
+export type CreateRoomInput = z.infer<typeof createChatSchema>;
+export type CreateChatInput = z.infer<typeof createChatSchema>;
